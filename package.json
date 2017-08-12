@@ -1,6 +1,6 @@
 {
   "name": "fetch-the-parrot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript library for fetching PartyParrot(s)",
   "main": "./dist/index.js",
   "scripts": {
