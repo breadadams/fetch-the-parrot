@@ -41,7 +41,7 @@ http://my-parrot-website.com/parrots/parrots/hd/parrot.gif
 ##### ES6
 
 ```
-import getParrotGif from 'fetch-the-parrot'
+import { getParrotGif } from 'fetch-the-parrot'
 
 getParrotGif({
   'name': 'Fiesta Parrot',

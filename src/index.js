@@ -76,5 +76,3 @@ export const getParrotGif = (options={}, callback) => {
   })
 
 }
-
-export default getParrotGif
