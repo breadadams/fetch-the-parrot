@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "mocha ./src/index.test.js -w --compilers js:babel-register",
+    "test:single": "mocha ./src/index.test.js --compilers js:babel-register",
     "prebuild": "rimraf dist",
     "build": "babel src --out-dir dist",
     "build:watch": "babel src --out-dir dist --watch"

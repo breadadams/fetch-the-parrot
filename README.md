@@ -1,5 +1,8 @@
 # fetch-the-parrot
 
+[![npm version](https://badge.fury.io/js/fetch-the-parrot.svg)](https://badge.fury.io/js/fetch-the-parrot)
+[![Build Status](https://travis-ci.org/breadadams/fetch-the-parrot.svg?branch=master)](https://travis-ci.org/breadadams/fetch-the-parrot)
+
 A small JS client to handle fetching the ever-loved _Party Parrots_ (of all [varieties](http://cultofthepartyparrot.com/)).
 
 ![Mega parrot!](https://g.redditmedia.com/F2mSqRceNQbYdWhAaTo0xy4uR4QxQlBMRFYAn1xrKK4.gif?w=320&s=b2d1e56e82733371048a7e2b6d61b7f8)
