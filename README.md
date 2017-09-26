@@ -60,7 +60,7 @@ This library exposes 3 methods in total.
 
 So far we've seen `getParrotGif` in the above snippets, but `getParrotsJSON` & `searchParrotsByName` are also available. Let's run over all 3 methods in more detail:
 
-* `getParrotGif(options, callback)`: This is the _primary_ (default) method, used to return a partyparrot's gif URL.
+* `getParrotGif(options, callback)`: This is the method used to return a partyparrot's `.gif` URL.
 
   * **options** `object`
 
