@@ -1,0 +1,73 @@
+@import "../node_modules/prismjs/themes/prism.css";
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section__header {
+  margin-bottom: 20px;
+}
+
+.section__headerTitle {
+  margin: 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+}
+
+.section__headerTitleLink {
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.section__headerBody {
+}
+
+.section__codeColumns {
+  display: flex;
+  margin: 0 -10px;
+}
+
+.section__codeColumn {
+  min-width: 0;
+  flex: 1 0 50%;
+  padding: 0 10px;
+}
+
+.section__codeBlock {
+  border-radius: 4px;
+}
+
+.section__codeBlock.-long {
+  max-height: 420px;
+  overflow: auto;
+}
+
+.code-block-wrap {
+  margin-bottom: 20px;
+}
+
+.code-block {
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.code-result {
+  max-height: 420px;
+  overflow: auto;
+  width: 600px;
+}

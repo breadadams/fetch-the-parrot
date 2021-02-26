@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch-the-parrot</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="section">
+      <h1>fetch-the-parrot</h1>
+    </header>
+
+    <section class="section" id="getParrot">
+      <div class="section__header">
+        <h2 class="section__headerTitle"><a class="section__headerTitleLink" href="#getParrot">getParrot</a></h2>
+      </div>
+
+      <div class="section__codeColumns">
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-js">import { getParrot } from 'fetch-the-parrot';
+
+const parrot = await getParrot('Party Parrot');</code></pre>
+        </div>
+
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-json" id="getParrotResult">Loading...</code></pre>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="getParrotGif">
+      <div class="section__header">
+        <h2 class="section__headerTitle"><a class="section__headerTitleLink" href="#getParrotGif">getParrotGif</a></h2>
+      </div>
+
+      <div class="section__codeColumns">
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-js">import { getParrotGif } from 'fetch-the-parrot';
+
+const parrotGif = await getParrotGif('Party Parrot');</code></pre>
+        </div>
+
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-json" id="getParrotGifResult">Loading...</code></pre>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="getParrotsJSON">
+      <div class="section__header">
+        <h2 class="section__headerTitle"><a class="section__headerTitleLink" href="#getParrotsJSON">getParrotsJSON</a></h2>
+      </div>
+
+      <div class="section__codeColumns">
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-js">import { getParrotsJSON } from 'fetch-the-parrot';
+
+const json = await getParrotsJSON();</code></pre>
+        </div>
+
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-json" id="getParrotsJSONResult">Loading...</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="getParrotsYAML">
+      <div class="section__header">
+        <h2 class="section__headerTitle"><a class="section__headerTitleLink" href="#getParrotsYAML">getParrotsYAML</a></h2>
+      </div>
+
+      <div class="section__codeColumns">
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-js">import { getParrotsYAML } from 'fetch-the-parrot';
+
+const yaml = await getParrotsYAML();</code></pre>
+        </div>
+
+        <div class="section__codeColumn">
+          <pre
+            class="section__codeBlock -long"
+          ><code class="language-yaml" id="getParrotsYAMLResult">Loading...</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.ts"></script>
+  </body>
+</html>
