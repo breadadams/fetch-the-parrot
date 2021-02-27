@@ -7,6 +7,9 @@
   "module": "dist/fetch-the-parrot.modern.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
     "start": "microbundle watch",
     "start:demo": "parcel demo/index.html",
     "build": "microbundle",
@@ -43,6 +46,7 @@
     "jest-fetch-mock": "^3.0.3",
     "microbundle": "^0.13.0",
     "parcel-bundler": "^1.12.4",
+    "pinst": "^2.1.6",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0",
     "prism-json-fold": "^1.0.1",
@@ -53,10 +57,5 @@
   "dependencies": {
     "@types/js-yaml": "^4.0.0",
     "js-yaml": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format:staged"
-    }
   }
 }
