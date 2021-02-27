@@ -42,7 +42,10 @@ code {
 
   &__headerTitle {
     margin: 0;
-    font-family: $font-mono;
+    
+    &.-mono {
+      font-family: $font-mono;
+    }
   }
 
   &__headerTitleLink {
