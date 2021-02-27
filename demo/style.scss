@@ -1,0 +1,117 @@
+@import "../node_modules/prismjs/themes/prism.css";
+
+$font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+  monospace;
+
+html,
+body {
+  font-family: $font-body;
+  padding: 0;
+  margin: 0;
+}
+
+code {
+  font-family: $font-mono;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mainHeader {
+  text-align: center;
+  max-width: 1120px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+
+  & __title {
+    font-size: 24px;
+  }
+}
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__headerTitle {
+    margin: 0;
+    font-family: $font-mono;
+  }
+
+  &__headerTitleLink {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__headerBody {
+    font-size: 14px;
+    margin: 20px 0 0;
+  }
+
+  &__codeColumns {
+    @media screen and (min-width: 860px) {
+      display: flex;
+      margin: 0 -10px;
+    }
+  }
+
+  &__codeColumn {
+    &:last-child {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: 860px) {
+      padding: 0 10px;
+      min-width: 0;
+      flex: 1 0 50%;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__codeBlock {
+    border-radius: 4px;
+
+    &.-long {
+      max-height: 420px;
+      overflow: auto;
+    }
+  }
+}
+
+// Github Corner
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
