@@ -5,6 +5,14 @@ $font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
 $font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
   monospace;
 
+$bp-desktop: 1156px;
+
+%section {
+  max-width: $bp-desktop;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
 html,
 body {
   font-family: $font-body;
@@ -20,27 +28,47 @@ code {
   box-sizing: border-box;
 }
 
+// Header
 .mainHeader {
+  @extend %section;
+  padding-top: 40px;
+  margin-bottom: 60px;
   text-align: center;
-  max-width: 1120px;
-  margin: 0 auto 60px;
-  padding: 0 20px;
 
-  & __title {
+  &__title {
     font-size: 24px;
+    margin: 0 0 32px;
+  }
+
+  &__badges {
+    a {
+      text-decoration: none;
+    }
   }
 }
 
+// Section
 .section {
-  max-width: 1120px;
-  margin: 0 auto 40px;
-  padding: 0 20px;
+  @extend %section;
+  margin-bottom: 40px;
 
-  &__header {
-    margin-bottom: 20px;
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #dfdede;
+    margin-top: 40px;
   }
 
-  &__headerTitle {
+  &__subSection {
+    margin-bottom: 40px;
+  }
+}
+
+// Section header
+.sectionHeader {
+  margin-bottom: 20px;
+
+  &__title {
     margin: 0;
 
     &.-mono {
@@ -48,30 +76,62 @@ code {
     }
   }
 
-  &__headerTitleLink {
+  &__titleLink {
     font-family: inherit;
     text-decoration: none;
     color: inherit;
-  }
+    position: relative;
 
-  &__headerBody {
-    font-size: 14px;
-    margin: 20px 0 0;
-  }
+    &::before {
+      content: "#";
+      color: rgb(201, 201, 201);
+      position: absolute;
+      left: -5px;
+      top: calc(50% + 2px);
+      font-size: 18px;
+      font-family: $font-mono;
+      font-weight: normal;
+      transform: translate(-100%, -50%);
+      display: none;
 
-  &__codeColumns {
-    @media screen and (min-width: 860px) {
-      display: flex;
-      margin: 0 -10px;
+      @media screen and (min-width: $bp-desktop) {
+        left: -10px;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      &::before {
+        display: block;
+      }
     }
   }
 
-  &__codeColumn {
+  &__body {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+
+  &__code {
+    margin: 0;
+    border-radius: 4px;
+  }
+}
+
+// Code Columns
+.codeColumns {
+  @media screen and (min-width: $bp-desktop) {
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  &__column {
     &:last-child {
       margin-top: 20px;
     }
 
-    @media screen and (min-width: 860px) {
+    @media screen and (min-width: $bp-desktop) {
       padding: 0 10px;
       min-width: 0;
       flex: 1 0 50%;
@@ -82,6 +142,12 @@ code {
     }
   }
 
+  &__columnTitle {
+    padding-left: 10px;
+    font-family: $font-mono;
+    font-size: 12px;
+  }
+
   &__codeBlock {
     border-radius: 4px;
 
@@ -89,6 +155,24 @@ code {
       max-height: 420px;
       overflow: auto;
     }
+  }
+}
+
+// Footer
+.footer {
+  @extend %section;
+
+  &__text {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  &__link {
+    color: blue;
+  }
+
+  &__parrot {
+    width: 24px;
   }
 }
 
