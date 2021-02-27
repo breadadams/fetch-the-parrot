@@ -1,7 +1,10 @@
 import { getParrotsJSON } from "../getParrotsJSON";
-import { ParrotRecord } from '../types'
+import { ParrotRecord } from "../types";
 
-export const getParrot = async (name?: string, url?: string): Promise<ParrotRecord | null> => {
+export const getParrot = async (
+  name?: string,
+  url?: string
+): Promise<ParrotRecord | null> => {
   if (name) {
     const nameLc = name.toLowerCase();
 

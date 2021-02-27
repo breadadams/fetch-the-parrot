@@ -1,4 +1,4 @@
-import { ParrotRecords } from '../types'
+import { ParrotRecords } from "../types";
 import { getParrot } from "./index";
 
 let parrots: ParrotRecords;
