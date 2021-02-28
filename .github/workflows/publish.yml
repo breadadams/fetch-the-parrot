@@ -1,9 +1,11 @@
-name: CI
+name: Publish
 
-on: [push]
+on:
+  release:
+    types: [released]
 
 jobs:
-  ci:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "12.x"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -29,14 +32,10 @@ jobs:
         if: steps.node-cache.outputs.cache-hit != 'true'
         run: npm install
 
-      - name: Check formatting
-        run: npm run format:check
+      - name: Build
+        run: npm run build
 
-      - name: Run tests
-        run: npm test
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          files: ./coverage/coverage-final.json
-          fail_ci_if_error: true
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
