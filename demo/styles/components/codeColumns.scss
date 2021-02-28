@@ -1,0 +1,37 @@
+.codeColumns {
+  @media screen and (min-width: $bp-desktop) {
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  &__column {
+    &:last-child {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 0 10px;
+      min-width: 0;
+      flex: 1 0 50%;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__columnTitle {
+    padding-left: 10px;
+    font-family: $font-mono;
+    font-size: 12px;
+  }
+
+  &__codeBlock {
+    border-radius: 4px;
+
+    &.-long {
+      max-height: 420px;
+      overflow: auto;
+    }
+  }
+}

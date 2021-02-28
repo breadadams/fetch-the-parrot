@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch-the-parrot</title>
+    <meta
+      name="description"
+      content="Fetch the parrot is a JavaScript library for retrieving Party Parrot gifs."
+    />
+    <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="icon" href="./assets/parrot.gif" type="image/gif" />
+  </head>
+  <body>
+    <header class="mainHeader">
+      <h1 class="mainHeader__title">
+        <a href="/" class="mainHeader__titleLink" title="fetch-the-parrot"
+          >fetch-the-parrot</a
+        >
+      </h1>
+
+      <div class="mainHeader__badges">
+        <a
+          href="https://www.npmjs.com/package/fetch-the-parrot"
+          title="NPM Package"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://badge.fury.io/js/fetch-the-parrot.svg"
+            alt="NPM Badge"
+          />
+        </a>
+        <a
+          href="https://github.com/breadadams/fetch-the-parrot/actions"
+          title="GitHub CI"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://github.com/breadadams/fetch-the-parrot/actions/workflows/ci.yml/badge.svg?branch=master&event=push"
+            alt="Github Actions Badge"
+          />
+        </a>
+        <a
+          href="https://codecov.io/gh/breadadams/fetch-the-parrot"
+          title="Codecov Report"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://codecov.io/gh/breadadams/fetch-the-parrot/branch/master/graph/badge.svg?token=77ZPZ043CW"
+            alt="Codecov Badge"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="install">
+        <header class="sectionHeader">
+          <h2 class="sectionHeader__title">
+            <a class="sectionHeader__titleLink" href="#install">Install</a>
+          </h2>
+        </header>
+
+        <div class="codeColumns">
+          <div class="codeColumns__column">
+            <pre
+              class="codeColumns__codeBlock"
+            ><code class="language-bash">$ npm install fetch-the-parrot</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="usage">
+        <header class="sectionHeader">
+          <h2 class="sectionHeader__title">
+            <a class="sectionHeader__titleLink" href="#usage">Usage</a>
+          </h2>
+        </header>
+
+        <div class="section__subSection" id="getParrot">
+          <div class="sectionHeader">
+            <h3 class="sectionHeader__title -mono">
+              <a class="sectionHeader__titleLink" href="#getParrot"
+                >getParrot</a
+              >
+            </h3>
+            <p class="sectionHeader__body">
+              Returns the object for the queried parrot.
+            </p>
+
+            <pre
+              class="sectionHeader__code"
+            ><code class="language-ts">(name?: string, url?: string) =&gt; Promise&lt;ParrotRecord | null&gt;</code></pre>
+          </div>
+
+          <div class="codeColumns">
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">index.js</span>
+              <pre
+                class="codeColumns__codeBlock"
+              ><code class="language-js">import { getParrot } from 'fetch-the-parrot';
+
+const parrot = await getParrot('Party Parrot');</code></pre>
+            </div>
+
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">Response</span>
+              <pre
+                class="codeColumns__codeBlock -long"
+              ><code class="language-json" id="getParrotResult">Loading...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__subSection" id="getParrotGif">
+          <div class="sectionHeader">
+            <h3 class="sectionHeader__title -mono">
+              <a class="sectionHeader__titleLink" href="#getParrotGif"
+                >getParrotGif</a
+              >
+            </h3>
+            <p class="sectionHeader__body">
+              Returns the <code>.gif</code> path for the queried parrot.
+            </p>
+
+            <pre
+              class="sectionHeader__code"
+            ><code class="language-ts">(name?: string, path?: string, url?: string) =&gt; Promise&lt;string | null&gt;</code></pre>
+          </div>
+
+          <div class="codeColumns">
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">index.js</span>
+              <pre
+                class="codeColumns__codeBlock"
+              ><code class="language-js">import { getParrotGif } from 'fetch-the-parrot';
+
+const parrotGif = await getParrotGif('Party Parrot');</code></pre>
+            </div>
+
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">Response</span>
+              <pre
+                class="codeColumns__codeBlock -long"
+              ><code class="language-json" id="getParrotGifResult">Loading...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__subSection" id="getParrotsJSON">
+          <div class="sectionHeader">
+            <h3 class="sectionHeader__title -mono">
+              <a class="sectionHeader__titleLink" href="#getParrotsJSON"
+                >getParrotsJSON</a
+              >
+            </h3>
+            <p class="sectionHeader__body">
+              Returns a <code>JSON</code> list of all parrots.
+            </p>
+
+            <pre
+              class="sectionHeader__code"
+            ><code class="language-ts">(url?: string) =&gt; Promise&lt;ParrotRecords&gt;</code></pre>
+          </div>
+
+          <div class="codeColumns">
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">index.js</span>
+              <pre
+                class="codeColumns__codeBlock"
+              ><code class="language-js">import { getParrotsJSON } from 'fetch-the-parrot';
+
+const json = await getParrotsJSON();</code></pre>
+            </div>
+
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">Response</span>
+              <pre
+                class="codeColumns__codeBlock -long"
+              ><code class="language-json" id="getParrotsJSONResult">Loading...</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__subSection" id="getParrotsYAML">
+          <div class="sectionHeader">
+            <h3 class="sectionHeader__title -mono">
+              <a class="sectionHeader__titleLink" href="#getParrotsYAML"
+                >getParrotsYAML</a
+              >
+            </h3>
+            <p class="sectionHeader__body">
+              Returns a <code>YAML</code> list of all parrots.
+            </p>
+
+            <pre
+              class="sectionHeader__code"
+            ><code class="language-ts">(url?: string) =&gt; Promise&lt;string&gt;</code></pre>
+          </div>
+
+          <div class="codeColumns">
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">index.js</span>
+              <pre
+                class="codeColumns__codeBlock"
+              ><code class="language-js">import { getParrotsYAML } from 'fetch-the-parrot';
+
+const yaml = await getParrotsYAML();</code></pre>
+            </div>
+
+            <div class="codeColumns__column">
+              <span class="codeColumns__columnTitle">Response</span>
+              <pre
+                class="codeColumns__codeBlock -long"
+              ><code class="language-yaml" id="getParrotsYAMLResult">Loading...</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="types">
+        <div class="sectionHeader">
+          <h2 class="sectionHeader__title">
+            <a class="sectionHeader__titleLink" href="#types">Types</a>
+          </h2>
+        </div>
+
+        <div class="codeColumns">
+          <div class="codeColumns__column">
+            <pre
+              class="codeColumns__codeBlock"
+            ><code class="language-ts">interface ParrotRecord {
+  name: string;
+  gif?: string;
+  hd?: string;
+  tip?: string;
+}
+
+type ParrotRecords = ParrotRecord[];</code></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        <span class="footer__textLine">
+          Built with 💚 by
+          <a
+            class="footer__link"
+            href="https://github.com/breadadams"
+            target="_blank"
+            rel="noopener"
+            >@breadadams</a
+          >.</span
+        >
+        <span class="footer__textLine"
+          >Data obtained from
+          <a
+            class="footer__link"
+            href="https://cultofthepartyparrot.com/"
+            title="Cult of the Party Parrot"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="footer__parrot"
+              src="./assets/parrot.gif"
+              alt="Party Parrot"
+            />
+            COTPP</a
+          >.</span
+        >
+      </p>
+    </footer>
+
+    <a
+      href="https://github.com/breadadams/fetch-the-parrot"
+      class="github-corner"
+      aria-label="View source on GitHub"
+      target="_blank"
+      rel="noopener"
+      ><svg
+        width="80"
+        height="80"
+        viewBox="0 0 250 250"
+        style="
+          fill: #151513;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          border: 0;
+          right: 0;
+        "
+        aria-hidden="true"
+      >
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+          d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+          fill="currentColor"
+          style="transform-origin: 130px 106px"
+          class="octo-arm"
+        ></path>
+        <path
+          d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+          fill="currentColor"
+          class="octo-body"
+        ></path></svg
+    ></a>
+
+    <script src="./index.ts"></script>
+  </body>
+</html>

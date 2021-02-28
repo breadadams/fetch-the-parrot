@@ -2,13 +2,23 @@
   "name": "fetch-the-parrot",
   "version": "2.0.0",
   "description": "Javascript library for fetching PartyParrot(s)",
-  "main": "./dist/index.js",
+  "source": "src/index.ts",
+  "main": "dist/fetch-the-parrot.umd.js",
+  "module": "dist/fetch-the-parrot.modern.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "mocha ./src/index.test.js -w --compilers js:babel-register",
-    "test:single": "mocha ./src/index.test.js --compilers js:babel-register",
-    "prebuild": "rimraf dist",
-    "build": "babel src --out-dir dist",
-    "build:watch": "babel src --out-dir dist --watch"
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "start": "microbundle watch",
+    "start:demo": "parcel demo/index.html",
+    "build": "microbundle",
+    "build:demo": "parcel build demo/index.html",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "format": "prettier --write .",
+    "format:staged": "pretty-quick --staged",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -26,28 +36,26 @@
   },
   "homepage": "https://github.com/breadadams/fetch-the-parrot#readme",
   "devDependencies": {
-    "babel-cli": "6.24.1",
-    "babel-preset-babili": "0.1.4",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-stage-2": "6.24.1",
-    "babel-register": "6.24.1",
-    "chai": "4.1.1",
-    "mocha": "^5.2.0",
-    "rimraf": "2.6.1"
-  },
-  "babel": {
-    "comments": false,
-    "presets": [
-      "es2015",
-      "stage-2",
-      "babili"
-    ],
-    "ignore": [
-      "*.test.js"
-    ]
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/jest": "^26.0.20",
+    "babel-jest": "^26.6.3",
+    "husky": "^5.1.1",
+    "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3",
+    "microbundle": "^0.13.0",
+    "parcel-bundler": "^1.12.4",
+    "pinst": "^2.1.6",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0",
+    "prism-json-fold": "^1.0.1",
+    "prismjs": "^1.23.0",
+    "sass": "^1.32.8",
+    "ts-node": "^9.1.1"
   },
   "dependencies": {
-    "es6-promise": "4.1.1",
-    "isomorphic-fetch": "2.2.1"
+    "@types/js-yaml": "^4.0.0",
+    "js-yaml": "^4.0.0"
   }
 }

@@ -1,0 +1,20 @@
+.section {
+  @extend %section;
+  padding-top: 20px;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #dfdede;
+    margin-top: 40px;
+  }
+
+  &:last-of-type::after {
+    display: none;
+  }
+
+  &__subSection {
+    margin-bottom: 40px;
+  }
+}
