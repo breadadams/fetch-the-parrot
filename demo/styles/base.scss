@@ -1,0 +1,14 @@
+html,
+body {
+  font-family: $font-body;
+  padding: 0;
+  margin: 0;
+}
+
+code {
+  font-family: $font-mono;
+}
+
+* {
+  box-sizing: border-box;
+}

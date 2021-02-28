@@ -4,37 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fetch-the-parrot</title>
-    <link rel="stylesheet" href="./style.scss" />
+    <meta
+      name="description"
+      content="Fetch the parrot is a JavaScript library for retrieving Party Parrot gifs."
+    />
+    <link rel="stylesheet" href="./styles/index.scss" />
     <link rel="icon" href="./assets/parrot.gif" type="image/gif" />
   </head>
   <body>
     <header class="mainHeader">
-      <h1 class="mainHeader__title">fetch-the-parrot</h1>
+      <h1 class="mainHeader__title">
+        <a href="/" class="mainHeader__titleLink" title="fetch-the-parrot"
+          >fetch-the-parrot</a
+        >
+      </h1>
 
       <div class="mainHeader__badges">
         <a
           href="https://www.npmjs.com/package/fetch-the-parrot"
           title="NPM Package"
           target="_blank"
+          rel="noopener"
         >
-          <img src="https://badge.fury.io/js/fetch-the-parrot.svg" />
+          <img
+            src="https://badge.fury.io/js/fetch-the-parrot.svg"
+            alt="NPM Badge"
+          />
         </a>
         <a
           href="https://github.com/breadadams/fetch-the-parrot/actions"
           title="GitHub CI"
           target="_blank"
+          rel="noopener"
         >
           <img
             src="https://github.com/breadadams/fetch-the-parrot/actions/workflows/ci.yml/badge.svg?branch=next&event=push"
+            alt="Github Actions Badge"
           />
         </a>
         <a
           href="https://codecov.io/gh/breadadams/fetch-the-parrot"
           title="Codecov Report"
           target="_blank"
+          rel="noopener"
         >
           <img
             src="https://codecov.io/gh/breadadams/fetch-the-parrot/branch/next/graph/badge.svg?token=77ZPZ043CW"
+            alt="Codecov Badge"
           />
         </a>
       </div>
@@ -57,10 +73,10 @@
         </div>
       </section>
 
-      <section class="section" id="methods">
+      <section class="section" id="usage">
         <header class="sectionHeader">
           <h2 class="sectionHeader__title">
-            <a class="sectionHeader__titleLink" href="#methods">Methods</a>
+            <a class="sectionHeader__titleLink" href="#usage">Usage</a>
           </h2>
         </header>
 
@@ -231,19 +247,31 @@ type ParrotRecords = ParrotRecord[];</code></pre>
 
     <footer class="footer">
       <p class="footer__text">
-        Built with 💚 by
-        <a
-          class="footer__link"
-          href="https://github.com/breadadams"
-          target="_blank"
-          >@breadadams</a
-        >. Data obtained from
-        <a
-          class="footer__link"
-          href="https://cultofthepartyparrot.com/"
-          title="Cult of the Party Parrot"
-          target="_blank"
-          ><img class="footer__parrot" src="./assets/parrot.gif" /> COTPP</a
+        <span class="footer__textLine">
+          Built with 💚 by
+          <a
+            class="footer__link"
+            href="https://github.com/breadadams"
+            target="_blank"
+            rel="noopener"
+            >@breadadams</a
+          >.</span
+        >
+        <span class="footer__textLine"
+          >Data obtained from
+          <a
+            class="footer__link"
+            href="https://cultofthepartyparrot.com/"
+            title="Cult of the Party Parrot"
+            target="_blank"
+            rel="noopener"
+            ><img
+              class="footer__parrot"
+              src="./assets/parrot.gif"
+              alt="Party Parrot"
+            />
+            COTPP</a
+          >.</span
         >
       </p>
     </footer>
@@ -253,6 +281,7 @@ type ParrotRecords = ParrotRecord[];</code></pre>
       class="github-corner"
       aria-label="View source on GitHub"
       target="_blank"
+      rel="noopener"
       ><svg
         width="80"
         height="80"

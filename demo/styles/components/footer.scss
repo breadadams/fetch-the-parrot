@@ -1,0 +1,24 @@
+.footer {
+  @extend %section;
+
+  &__text {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  &__textLine {
+    display: block;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: initial;
+    }
+  }
+
+  &__link {
+    color: blue;
+  }
+
+  &__parrot {
+    width: 24px;
+  }
+}

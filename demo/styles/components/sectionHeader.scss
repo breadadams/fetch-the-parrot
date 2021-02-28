@@ -1,0 +1,53 @@
+.sectionHeader {
+  margin-bottom: 20px;
+
+  &__title {
+    margin: 0;
+
+    &.-mono {
+      font-family: $font-mono;
+    }
+  }
+
+  &__titleLink {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+
+    &::before {
+      content: "#";
+      color: rgb(201, 201, 201);
+      position: absolute;
+      left: -5px;
+      top: calc(50% + 2px);
+      font-size: 18px;
+      font-family: $font-mono;
+      font-weight: normal;
+      transform: translate(-100%, -50%);
+      display: none;
+
+      @media screen and (min-width: $bp-desktop) {
+        left: -10px;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      &::before {
+        display: block;
+      }
+    }
+  }
+
+  &__body {
+    font-size: 14px;
+    margin: 20px 0;
+  }
+
+  &__code {
+    margin: 0;
+    border-radius: 4px;
+  }
+}
