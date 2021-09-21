@@ -1,6 +1,6 @@
 {
   "name": "fetch-the-parrot",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Javascript library for fetching PartyParrot(s)",
   "source": "src/index.ts",
   "main": "dist/fetch-the-parrot.umd.js",
